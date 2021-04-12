@@ -1,11 +1,15 @@
 <template>
-  <HelloWorld></HelloWorld>
+  <div>
+  <HelloWorld>First component not working</HelloWorld>
+  <SecondComponent>Second component not working</SecondComponent>
+  </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import SecondComponent from './components/SecondComponent.vue'
 export default {
-  components: { HelloWorld },
+  components: { HelloWorld, SecondComponent },
   
 }
 </script>
