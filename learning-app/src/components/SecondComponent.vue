@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h1>{{title}}</h1>
-        <h2>{{counter}}</h2>
+        <h1 v-if="counter === 3">{{title}}</h1>
+        <h2 v-else>{{counter}}</h2>
 
         <button v-on:click="IncrementCounter()">Dodaj 1 do countera</button>
         <button v-on:click="DecrementCounter()">Odejmij 1 od countera</button>
@@ -13,7 +13,7 @@
 export default {
     data(){
         return{
-            title: 'Second title',
+            title: 'Three',
             counter: 0
         }
     },
