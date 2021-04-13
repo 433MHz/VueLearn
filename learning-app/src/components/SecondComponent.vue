@@ -1,5 +1,7 @@
 <template>
     <div>
+        <ComponentUnderSecond v-if="counter < 0"></ComponentUnderSecond>
+        <ComponentUnderSecondPlus v-else></ComponentUnderSecondPlus>
         <h1 v-if="counter === 3">{{title}}</h1>
         <h2 v-else>{{counterWithNum}}</h2>
 
@@ -12,7 +14,10 @@
 
 
 <script>
+import ComponentUnderSecond from './ComponentUnderSecond.vue';
+import ComponentUnderSecondPlus from './ComponentUnderSecondPlus.vue';
 export default {
+  components: { ComponentUnderSecond, ComponentUnderSecondPlus },
     data(){
         return{
             title: 'Three',
